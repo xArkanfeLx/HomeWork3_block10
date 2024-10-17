@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/frame1"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Задание 1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/textInfoET"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Поле ввода информации"
+                android:gravity="center"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginVertical="25dp">
+
+                <Button
+                    android:id="@+id/btnSaveBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сохранить"
+                    android:layout_weight="1"
+                    android:textSize="18dp"/>
+                <Button
+                    android:id="@+id/btnDeleteBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Удалить"
+                    android:layout_weight="1"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resultTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Пусто"
+                app:layout_constraintBottom_toBottomOf="@+id/et1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Задание 2"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <CheckBox
+                    android:id="@+id/checkboxPddCH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Информация"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:layout_marginTop="50dp"/>
+                <LinearLayout
+                    android:id="@+id/framePDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ПДД1"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ПДД2"
+                        android:textSize="14dp"
+                        android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
