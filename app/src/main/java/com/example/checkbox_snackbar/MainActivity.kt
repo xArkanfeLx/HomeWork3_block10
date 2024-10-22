@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -59,15 +60,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             btnDelete -> {
+                val lastText = textInfo.text.toString()
                 textInfo.text = ""
+                val snackbar = Snackbar.make(v,"Вы удалили данные!",Snackbar.LENGTH_LONG)
+                    .setAction("Откатить действие?") {
+                        textInfo.text = lastText
+                        Snackbar.make(v,"Откатили",Snackbar.LENGTH_LONG).show()
+                    }
+                snackbar.show()
             }
 
             checkBoxPDD -> {
                 if (checkBoxPDD.isChecked) {
                     textPDD.setVisibility(View.VISIBLE)
-                    checkBoxPDD.text = "ПДД"
+                    checkBoxPDD.text = getString(R.string.name_Cb)
                 } else {
-                    checkBoxPDD.text = "Информация"
+                    checkBoxPDD.text = getString(R.string.info_Cb)
                     textPDD.setVisibility(View.GONE)
                 }
 
